@@ -12,7 +12,7 @@ Status: completed
 
 ## Phase 2 - Observability Setup
 
-Status: in_progress
+Status: completed
 
 - Run in `OPENCODE_ENFORCEMENT_MODE=shadow`
 - Run in `OPENCODE_STOP_CHECK_MODE=plan`
@@ -31,18 +31,27 @@ Checkpoint artifacts:
 
 ## Phase 3 - Shadow Burn-in
 
-Status: pending
+Status: in_progress
 
 - Operate with real tasks for 1-2 days
 - Identify top false-positive rules
 - Create tuning candidates for path patterns and exclusions
 
+Current artifacts:
+
+- Labels: `OPENCODE_PHASE2_LABELS.md`
+- Progress snapshots: `OPENCODE_PHASE2_PROGRESS.md`
+
 ## Phase 4 - Rule Tuning
 
-Status: pending
+Status: in_progress
 
 - Tune `skill-rules.json` path patterns, exclusions, and skip markers
 - Re-run burn-in sample
+
+Current artifact:
+
+- Tuning notes: `OPENCODE_PHASE4_TUNING.md`
 
 ## Phase 5 - Progressive Enforce
 
