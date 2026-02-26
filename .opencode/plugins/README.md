@@ -4,7 +4,8 @@ This folder contains migration skeletons for converting Claude-style hook workfl
 
 ## Included
 
-- `hook-compat-skeleton.ts`: event handler skeleton for prompt-time skill hints, edited file tracking, and idle-time checks
+- `hook-compat.ts`: implementation for prompt-time skill hints, edited-file tracking, and idle-time check suggestions
+- `hook-compat-skeleton.ts`: minimal starter for custom adaptation
 
 ## Event Mapping
 
@@ -15,7 +16,6 @@ This folder contains migration skeletons for converting Claude-style hook workfl
 ## Wiring Steps
 
 1. Keep using `.claude/skills/skill-rules.json` as your trigger source
-2. Replace `defaultRules` in the skeleton with file-backed loading
-3. Add persistence for edited files by session ID
-4. Add TypeScript/build/test checks in `session.idle`
-5. Register this plugin in your OpenCode config after implementation
+2. Keep `./.opencode/plugins/hook-compat.ts` in the `plugin` list of `.opencode/opencode.jsonc`
+3. Verify cache output under `.opencode/cache/hook-compat/`
+4. Tune stop-time check suggestions for your package manager and workspace layout
