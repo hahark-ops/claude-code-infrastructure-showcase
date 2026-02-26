@@ -99,8 +99,12 @@ Completion notes:
 
 ## Phase 8 - Weekly Optimization
 
-Status: pending
+Status: in_progress
 
 - Review runtime KPIs
 - Adjust model tiers and concurrency
 - Adjust guardrails and stop-check strategy
+
+Current checkpoint:
+
+- Week 1 report: `OPENCODE_PHASE8_WEEK1.md`
