@@ -30,11 +30,12 @@ This report captures the first observability checkpoint under shadow/plan operat
 
 ## Top 3 Tuning Actions
 
-1. Keep `frontend-dev-guidelines` in shadow and label current violations using `OPENCODE_PHASE2_LABELS.md`.
-2. Add provisional exclusions for generated/test fixture UI paths if false positives are confirmed.
-3. Split frontend block conditions into two tiers (strict MUI misuse patterns vs broad component edits) before enforce rollout.
+1. Completed: labeled current violations in `OPENCODE_PHASE2_LABELS.md`.
+2. Completed: added provisional exclusions for stories/fixtures/mocks in frontend guidance triggers.
+3. Completed: split frontend block logic into strict `frontend-mui-v7-guardrail` and `frontend-dev-guidelines` warning mode.
 
 ## Notes
 
 - Current violations are still concentrated in frontend component edit scenarios.
-- False-positive rate is pending manual labels and should be computed at the next checkpoint.
+- Preliminary labeling result: 3 FP and 2 TP from current rows (`false_positive_rate = 0.60`).
+- Tuning handoff created: `OPENCODE_PHASE4_TUNING.md`.
