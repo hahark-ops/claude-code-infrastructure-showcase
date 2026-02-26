@@ -69,11 +69,15 @@ Current checkpoint:
 
 ## Phase 6 - Stop Runner Progressive Execute
 
-Status: pending
+Status: in_progress
 
 - Move from `plan` to `execute` by scope
 - Verify package-manager and monorepo command resolution
 - Tune command cap and timeout behavior
+
+Current checkpoint:
+
+- Execute-mode report: `OPENCODE_PHASE6_PROGRESS.md`
 
 ## Phase 7 - Team Playbook
 
