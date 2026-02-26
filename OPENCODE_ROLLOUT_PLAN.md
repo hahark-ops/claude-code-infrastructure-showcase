@@ -101,7 +101,7 @@ Completion notes:
 
 ## Phase 8 - Weekly Optimization
 
-Status: in_progress
+Status: completed
 
 - Review runtime KPIs
 - Adjust model tiers and concurrency
@@ -115,3 +115,12 @@ Current checkpoint:
 - Week 3 labels: `OPENCODE_PHASE8_WEEK3_LABELS.md`
 - Week 4 report: `OPENCODE_PHASE8_WEEK4.md`
 - Locked defaults: `OPENCODE_DEFAULT_PROFILE.md`
+- Closure report: `OPENCODE_PHASE8_CLOSURE.md`
+
+## Post-Rollout Mode
+
+Status: active
+
+- Run weekly KPI maintenance only
+- Apply canary-based scope promotions
+- Re-open tuning phases only on KPI regression
