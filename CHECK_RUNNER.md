@@ -32,9 +32,9 @@ Per package root:
 
 Per package root, command plan prefers:
 
-1. `typecheck` script, else `npx tsc --noEmit` when `tsconfig.json` exists
+1. `check` script, else `typecheck` script, else `npx tsc --noEmit` when `tsconfig.json` exists
 2. `lint` script
-3. `test` script
+3. `test` script (only when `OPENCODE_STOP_INCLUDE_TEST=1`)
 4. `build` script
 5. `npx prisma generate` when Prisma schema exists
 

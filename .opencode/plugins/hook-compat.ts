@@ -321,6 +321,8 @@ async function planChecks(projectDir: string, paths: string[]): Promise<CheckPla
   }
   if (roots.size === 0 && existsSync(join(projectDir, "package.json"))) roots.add(projectDir);
 
+  const includeTest = process.env.OPENCODE_STOP_INCLUDE_TEST === "1";
+
   const plans: CheckPlan[] = [];
   for (const root of roots) {
     let pkg: any = {};
@@ -335,11 +337,12 @@ async function planChecks(projectDir: string, paths: string[]): Promise<CheckPla
       return `${pm} ${script}`;
     };
 
-    if (scriptExists(pkg, "typecheck")) plans.push({ cwd: root, command: run("typecheck") });
+    if (scriptExists(pkg, "check")) plans.push({ cwd: root, command: run("check") });
+    else if (scriptExists(pkg, "typecheck")) plans.push({ cwd: root, command: run("typecheck") });
     else if (existsSync(join(root, "tsconfig.json"))) plans.push({ cwd: root, command: "npx tsc --noEmit" });
 
     if (scriptExists(pkg, "lint")) plans.push({ cwd: root, command: run("lint") });
-    if (scriptExists(pkg, "test")) plans.push({ cwd: root, command: run("test") });
+    if (includeTest && scriptExists(pkg, "test")) plans.push({ cwd: root, command: run("test") });
     if (scriptExists(pkg, "build")) plans.push({ cwd: root, command: run("build") });
     if (existsSync(join(root, "prisma", "schema.prisma")) || existsSync(join(root, "schema.prisma"))) {
       plans.push({ cwd: root, command: "npx prisma generate" });
