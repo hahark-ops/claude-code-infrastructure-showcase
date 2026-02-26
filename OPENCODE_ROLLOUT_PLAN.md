@@ -78,13 +78,18 @@ Status: in_progress
 Current checkpoint:
 
 - Execute-mode report: `OPENCODE_PHASE6_PROGRESS.md`
+- Real-scope expansion: `OPENCODE_PHASE6_EXPANSION.md`
 
 ## Phase 7 - Team Playbook
 
-Status: pending
+Status: in_progress
 
 - Document role vs task-agent usage
 - Document incident response and rollback procedure
+
+Current artifact:
+
+- Team playbook: `OPENCODE_TEAM_PLAYBOOK.md`
 
 ## Phase 8 - Weekly Optimization
 
