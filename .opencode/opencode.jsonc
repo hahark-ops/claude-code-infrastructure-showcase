@@ -24,6 +24,40 @@
               "text"
             ]
           }
+        },
+        "gpt-5.1": {
+          "name": "GPT-5.1",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        },
+        "gpt-5-mini": {
+          "name": "GPT-5 Mini",
+          "limit": {
+            "context": 128000,
+            "output": 32768
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         }
       }
     }
