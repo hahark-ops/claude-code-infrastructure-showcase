@@ -56,7 +56,7 @@ Current artifact:
 
 ## Phase 5 - Progressive Enforce
 
-Status: in_progress
+Status: completed
 
 - Enable `enforce` on one guardrail family first
 - Keep remaining rules in shadow mode
@@ -66,6 +66,7 @@ Current checkpoint:
 
 - Canary result included in `OPENCODE_PHASE3_BURNIN.md`
 - Expansion report: `OPENCODE_PHASE5_PROGRESS.md`
+- Week 2 strict-block quality snapshot: `OPENCODE_PHASE8_WEEK2_LABELS.md`
 
 ## Phase 6 - Stop Runner Progressive Execute
 
@@ -108,3 +109,4 @@ Status: in_progress
 Current checkpoint:
 
 - Week 1 report: `OPENCODE_PHASE8_WEEK1.md`
+- Week 2 report: `OPENCODE_PHASE8_WEEK2.md`
