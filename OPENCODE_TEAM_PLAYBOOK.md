@@ -12,6 +12,10 @@ Operational guide for day-to-day use of the OpenCode runtime guardrails.
   - default `OPENCODE_STOP_CHECK_MODE=plan`
   - enable `execute` per healthy package scope
 
+Reference baseline:
+
+- `OPENCODE_DEFAULT_PROFILE.md`
+
 ## Role vs Task-Agent Usage
 
 - roles (`.opencode/oh-my-opencode.json`): orchestration and model routing
