@@ -65,6 +65,7 @@ Status: in_progress
 Current checkpoint:
 
 - Canary result included in `OPENCODE_PHASE3_BURNIN.md`
+- Expansion report: `OPENCODE_PHASE5_PROGRESS.md`
 
 ## Phase 6 - Stop Runner Progressive Execute
 
