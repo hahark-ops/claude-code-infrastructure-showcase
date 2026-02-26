@@ -23,6 +23,10 @@ This repository started as a Claude Code infrastructure showcase. This guide doc
 - `.opencode/plugins/hook-compat.ts`: concrete hook-compat implementation for OpenCode events
 - `.opencode/plugins/hook-compat-skeleton.ts`: starter event mapping for Claude-style hooks
 - `.opencode/plugins/README.md`: wiring notes for event and persistence adaptation
+- `RULE_MAPPING.md`: source-rule to runtime-event mapping
+- `EVENT_PAYLOAD_NOTES.md`: payload-key capture strategy and state format
+- `BLOCK_POLICY.md`: shadow/enforce rollout policy for guardrail blocks
+- `CHECK_RUNNER.md`: stop-check planning and execution rules
 - `.gitignore` updates for OpenCode local runtime files and local secrets
 
 ## Migration Checklist
@@ -41,6 +45,13 @@ This repository started as a Claude Code infrastructure showcase. This guide doc
 3. Record edited files from `file.edited` by session
 4. Generate scoped check hints from `session.idle`
 5. Tune commands to your package manager and monorepo layout
+
+## Runtime Modes
+
+- `OPENCODE_ENFORCEMENT_MODE=shadow|enforce` (default `shadow`)
+- `OPENCODE_STOP_CHECK_MODE=plan|execute` (default `plan`)
+- `OPENCODE_STOP_MAX_COMMANDS=<n>` (default `6`)
+- `OPENCODE_HOOK_SAMPLE_LIMIT=<n>` (default `8`)
 
 ## Verification Checklist
 

@@ -357,9 +357,13 @@ MIT License - Use freely in your projects, commercial or personal.
 
 - 📖 [Claude Integration Guide](CLAUDE_INTEGRATION_GUIDE.md) - For AI-assisted setup
 - ⚙️ [OpenCode Migration Guide](MIGRATION_TO_OPENCODE.md)
+- 🗺️ [Rule Mapping](RULE_MAPPING.md)
+- 🧪 [Event Payload Notes](EVENT_PAYLOAD_NOTES.md)
+- 🛡️ [Block Policy](BLOCK_POLICY.md)
+- ✅ [Stop Check Runner](CHECK_RUNNER.md)
 - 🎨 [Skills Documentation](.claude/skills/README.md)
 - 🪝 [Hooks Setup](.claude/hooks/README.md)
 - 🤖 [Agents Guide](.claude/agents/README.md)
 - 📝 [Dev Docs Pattern](dev/README.md)
 
-**Start here:** Copy the two essential hooks, add one skill, and see the auto-activation magic happen.
+**Start here:** Use `.opencode/opencode.jsonc` with `.opencode/plugins/hook-compat.ts`, then tune `skill-rules.json` and rollout `shadow -> enforce`.
