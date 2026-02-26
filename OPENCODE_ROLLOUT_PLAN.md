@@ -12,12 +12,17 @@ Status: completed
 
 ## Phase 2 - Observability Setup
 
-Status: pending
+Status: in_progress
 
 - Run in `OPENCODE_ENFORCEMENT_MODE=shadow`
 - Run in `OPENCODE_STOP_CHECK_MODE=plan`
 - Collect session state and payload samples
 - Define KPI snapshots: block hit rate, false-positive rate, stop-check pass rate
+
+Kickoff evidence:
+
+- Baseline note: `OPENCODE_OBSERVABILITY_BASELINE.md`
+- Session sample: `.opencode/cache/hook-compat/phase2baseline.json`
 
 ## Phase 3 - Shadow Burn-in
 
