@@ -82,7 +82,7 @@ Current checkpoint:
 
 ## Phase 7 - Team Playbook
 
-Status: in_progress
+Status: completed
 
 - Document role vs task-agent usage
 - Document incident response and rollback procedure
@@ -90,6 +90,12 @@ Status: in_progress
 Current artifact:
 
 - Team playbook: `OPENCODE_TEAM_PLAYBOOK.md`
+
+Completion notes:
+
+- Role vs task-agent usage documented
+- Incident response and rollback path documented
+- Operator handoff checklist added
 
 ## Phase 8 - Weekly Optimization
 

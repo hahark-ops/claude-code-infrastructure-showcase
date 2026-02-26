@@ -43,3 +43,20 @@ If stop checks become noisy:
 1. review KPIs from progress docs
 2. confirm false-positive trend is stable
 3. promote additional scopes to enforce/execute only after canary passes
+
+## Phase 7 Completion Checklist
+
+- role vs task-agent operating split is documented and shared
+- incident response fallback (`enforce -> shadow`, `execute -> plan`) is documented
+- canary-first rollout rule is documented
+- on-call reviewer knows where session traces are stored (`.opencode/cache/hook-compat/*.json`)
+
+## Handoff Notes
+
+For new operators:
+
+1. Read `OPENCODE_ROLLOUT_PLAN.md` for current phase status.
+2. Read `OPENCODE_PHASE5_PROGRESS.md` and `OPENCODE_PHASE6_PROGRESS.md` for latest runtime behavior.
+3. Start in conservative mode unless explicitly running a canary:
+   - `OPENCODE_ENFORCEMENT_MODE=shadow`
+   - `OPENCODE_STOP_CHECK_MODE=plan`
