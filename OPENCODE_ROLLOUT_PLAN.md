@@ -27,6 +27,7 @@ Kickoff evidence:
 Checkpoint artifacts:
 
 - Progress report: `OPENCODE_PHASE2_PROGRESS.md`
+- Labeling sheet: `OPENCODE_PHASE2_LABELS.md`
 
 ## Phase 3 - Shadow Burn-in
 
