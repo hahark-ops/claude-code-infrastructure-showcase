@@ -70,7 +70,7 @@ Current checkpoint:
 
 ## Phase 6 - Stop Runner Progressive Execute
 
-Status: in_progress
+Status: completed
 
 - Move from `plan` to `execute` by scope
 - Verify package-manager and monorepo command resolution
@@ -80,6 +80,7 @@ Current checkpoint:
 
 - Execute-mode report: `OPENCODE_PHASE6_PROGRESS.md`
 - Real-scope expansion: `OPENCODE_PHASE6_EXPANSION.md`
+- Week 3 real-scope health check: `OPENCODE_PHASE8_WEEK3.md`
 
 ## Phase 7 - Team Playbook
 
@@ -110,3 +111,5 @@ Current checkpoint:
 
 - Week 1 report: `OPENCODE_PHASE8_WEEK1.md`
 - Week 2 report: `OPENCODE_PHASE8_WEEK2.md`
+- Week 3 report: `OPENCODE_PHASE8_WEEK3.md`
+- Week 3 labels: `OPENCODE_PHASE8_WEEK3_LABELS.md`
