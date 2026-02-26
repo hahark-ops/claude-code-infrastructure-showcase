@@ -242,7 +242,7 @@ async function matchesFileTrigger(projectDir: string, filePath: string, rule: Sk
   const contentPatterns = triggers.contentPatterns ?? [];
   if (contentPatterns.length === 0) return true;
   const abs = resolveFile(projectDir, filePath);
-  if (!existsSync(abs)) return true;
+  if (!existsSync(abs)) return false;
   try {
     const content = await readFile(abs, "utf-8");
     return contentPatterns.some((pattern) => {
@@ -253,7 +253,7 @@ async function matchesFileTrigger(projectDir: string, filePath: string, rule: Sk
       }
     });
   } catch {
-    return true;
+    return false;
   }
 }
 

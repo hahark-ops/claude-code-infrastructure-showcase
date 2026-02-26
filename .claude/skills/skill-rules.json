@@ -92,9 +92,9 @@
         },
         "frontend-dev-guidelines": {
             "type": "guardrail",
-            "enforcement": "block",
+            "enforcement": "warn",
             "priority": "high",
-            "description": "React/TypeScript best practices including MUI v7 compatibility",
+            "description": "React/TypeScript best practices and frontend implementation guidance",
             "promptTriggers": {
                 "keywords": [
                     "component",
@@ -134,21 +134,76 @@
                     "**/*.test.ts",
                     "**/*.spec.tsx",
                     "**/*.spec.ts",
+                    "**/*.stories.tsx",
+                    "**/storybook/**",
+                    "**/fixtures/**",
+                    "**/mocks/**",
                     "**/*.styles.ts",
                     "**/vite.config.ts",
                     "**/tsconfig.json"
                 ],
                 "contentPatterns": [
-                    "from '@mui/material';",
-                    "import.*Grid.*from.*@mui",
-                    "<Grid ",
-                    "Grid2",
-                    "Unstable_Grid",
-                    "makeStyles",
-                    "@material-ui/core"
+                    "(function|const|let).*?(Component|Page|Modal|Dialog)",
+                    "return\\s*\\(",
+                    "from\\s+['\"].*react.*['\"]"
                 ]
             },
             "blockMessage": "⚠️ BLOCKED - Frontend Best Practices Required\n\n📋 REQUIRED ACTION:\n1. Use Skill tool: 'frontend-dev-guidelines'\n2. Review MUI v7 patterns (Grid uses size={{}} prop, NOT xs/sm props)\n3. Check React/TypeScript best practices\n4. Use proper styling patterns\n5. Then retry this edit\n\nReason: Enforce MUI v7 compatibility and React best practices\nFile: {file_path}\n\n💡 TIP: Add '// @skip-validation' comment to skip future checks",
+            "skipConditions": {
+                "sessionSkillUsed": true,
+                "fileMarkers": [
+                    "@skip-validation"
+                ],
+                "envOverride": "SKIP_FRONTEND_GUIDELINES"
+            }
+        },
+        "frontend-mui-v7-guardrail": {
+            "type": "guardrail",
+            "enforcement": "block",
+            "priority": "high",
+            "description": "Strict guardrail for legacy MUI usage and Grid API misuse",
+            "promptTriggers": {
+                "keywords": [
+                    "MUI",
+                    "Material-UI",
+                    "Grid",
+                    "Grid2",
+                    "makeStyles",
+                    "@material-ui/core"
+                ],
+                "intentPatterns": [
+                    "(fix|migrate|update).*?(mui|material-ui|grid)",
+                    "(create|edit|update).*?(mui|grid|material-ui)"
+                ]
+            },
+            "fileTriggers": {
+                "pathPatterns": [
+                    "frontend/src/**/*.tsx",
+                    "frontend/src/**/*.ts",
+                    "client/src/**/*.tsx",
+                    "client/src/**/*.ts",
+                    "src/**/*.tsx",
+                    "components/**/*.tsx",
+                    "app/**/*.tsx",
+                    "pages/**/*.tsx"
+                ],
+                "pathExclusions": [
+                    "**/*.test.tsx",
+                    "**/*.spec.tsx",
+                    "**/*.stories.tsx",
+                    "**/fixtures/**",
+                    "**/mocks/**"
+                ],
+                "contentPatterns": [
+                    "@material-ui/core",
+                    "makeStyles",
+                    "Unstable_Grid",
+                    "Grid2",
+                    "<Grid[^>]*(xs|sm|md|lg|xl)=",
+                    "import.*Grid.*from.*@mui"
+                ]
+            },
+            "blockMessage": "⚠️ BLOCKED - MUI Guardrail Triggered\n\nDetected legacy or risky MUI usage.\n\nRequired:\n1. Use Skill tool: 'frontend-dev-guidelines'\n2. Replace legacy patterns (`makeStyles`, `@material-ui/core`, old Grid props)\n3. Re-run edit after migration\n\nFile: {file_path}",
             "skipConditions": {
                 "sessionSkillUsed": true,
                 "fileMarkers": [
