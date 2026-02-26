@@ -15,6 +15,7 @@ Operational guide for day-to-day use of the OpenCode runtime guardrails.
 Reference baseline:
 
 - `OPENCODE_DEFAULT_PROFILE.md`
+- `OPENCODE_PHASE8_CLOSURE.md`
 
 ## Role vs Task-Agent Usage
 
