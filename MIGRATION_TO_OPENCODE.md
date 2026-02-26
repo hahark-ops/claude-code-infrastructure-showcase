@@ -48,6 +48,7 @@ This repository started as a Claude Code infrastructure showcase. This guide doc
 2. Edit events append file paths to session-scoped tracking storage
 3. Idle event runs check command list only for touched scopes
 4. No local secrets or runtime caches are tracked by git
+5. `skill-rules.json` path patterns match your real source layout (`src`, `packages/*/src`, `components`, `app`, `pages`)
 
 ## Upstream Sync Strategy
 
