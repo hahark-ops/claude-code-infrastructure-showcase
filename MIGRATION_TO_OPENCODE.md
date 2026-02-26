@@ -20,6 +20,7 @@ This repository started as a Claude Code infrastructure showcase. This guide doc
 
 - `.opencode/opencode.jsonc`: OpenCode base config template
 - `.opencode/oh-my-opencode.json`: oh-my-opencode role/category model mapping using GPT models
+- `.opencode/plugins/hook-compat.ts`: concrete hook-compat implementation for OpenCode events
 - `.opencode/plugins/hook-compat-skeleton.ts`: starter event mapping for Claude-style hooks
 - `.opencode/plugins/README.md`: wiring notes for event and persistence adaptation
 - `.gitignore` updates for OpenCode local runtime files and local secrets
@@ -36,10 +37,10 @@ This repository started as a Claude Code infrastructure showcase. This guide doc
 ## Plugin Wiring Checklist
 
 1. Read trigger source from `.claude/skills/skill-rules.json`
-2. Implement prompt-time matcher in `tui.prompt.append`
+2. Use `.opencode/plugins/hook-compat.ts` in the OpenCode plugin list
 3. Record edited files from `file.edited` by session
-4. Run scoped checks from `session.idle`
-5. Register plugin in OpenCode config after implementation is complete
+4. Generate scoped check hints from `session.idle`
+5. Tune commands to your package manager and monorepo layout
 
 ## Verification Checklist
 
