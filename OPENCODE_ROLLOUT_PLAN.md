@@ -24,6 +24,10 @@ Kickoff evidence:
 - Baseline note: `OPENCODE_OBSERVABILITY_BASELINE.md`
 - Session sample: `.opencode/cache/hook-compat/phase2baseline.json`
 
+Checkpoint artifacts:
+
+- Progress report: `OPENCODE_PHASE2_PROGRESS.md`
+
 ## Phase 3 - Shadow Burn-in
 
 Status: pending
