@@ -42,6 +42,13 @@ tmp/
 temp/
 *.tmp
 
+# OpenCode local runtime files
+.opencode/*.local.json
+.opencode/*.local.jsonc
+.opencode/secrets.json
+.opencode/session/
+.opencode/cache/
+
 # Database
 *.sqlite
 *.db

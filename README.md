@@ -28,6 +28,10 @@ Born from 6 months of real-world use managing a complex TypeScript microservices
 
 **Claude:** Read [`CLAUDE_INTEGRATION_GUIDE.md`](CLAUDE_INTEGRATION_GUIDE.md) for step-by-step integration instructions tailored for AI-assisted setup.
 
+### ⚙️ Using OpenCode to Integrate?
+
+Read [`MIGRATION_TO_OPENCODE.md`](MIGRATION_TO_OPENCODE.md) for the migration map, config templates, and provider/model updates.
+
 ### 🎯 I want skill auto-activation
 
 **The breakthrough feature:** Skills that actually activate when you need them.
@@ -352,6 +356,7 @@ MIT License - Use freely in your projects, commercial or personal.
 ## Quick Links
 
 - 📖 [Claude Integration Guide](CLAUDE_INTEGRATION_GUIDE.md) - For AI-assisted setup
+- ⚙️ [OpenCode Migration Guide](MIGRATION_TO_OPENCODE.md)
 - 🎨 [Skills Documentation](.claude/skills/README.md)
 - 🪝 [Hooks Setup](.claude/hooks/README.md)
 - 🤖 [Agents Guide](.claude/agents/README.md)
