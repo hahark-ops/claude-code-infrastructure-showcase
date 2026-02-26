@@ -113,3 +113,5 @@ Current checkpoint:
 - Week 2 report: `OPENCODE_PHASE8_WEEK2.md`
 - Week 3 report: `OPENCODE_PHASE8_WEEK3.md`
 - Week 3 labels: `OPENCODE_PHASE8_WEEK3_LABELS.md`
+- Week 4 report: `OPENCODE_PHASE8_WEEK4.md`
+- Locked defaults: `OPENCODE_DEFAULT_PROFILE.md`
