@@ -139,11 +139,33 @@ function escapeRegex(value: string): string {
 }
 
 function globToRegExp(pattern: string): RegExp {
-  const value = toPosix(pattern)
-    .split("**")
-    .map((part) => part.split("*").map(escapeRegex).join("[^/]*"))
-    .join(".*");
-  return new RegExp(`^${value}$`, "i");
+  const source = toPosix(pattern);
+  let regex = "^";
+  for (let i = 0; i < source.length; i += 1) {
+    const ch = source[i];
+    if (ch !== "*") {
+      regex += escapeRegex(ch);
+      continue;
+    }
+
+    const next = source[i + 1];
+    if (next === "*") {
+      const after = source[i + 2];
+      if (after === "/") {
+        regex += "(?:.*/)?";
+        i += 2;
+      } else {
+        regex += ".*";
+        i += 1;
+      }
+      continue;
+    }
+
+    regex += "[^/]*";
+  }
+
+  regex += "$";
+  return new RegExp(regex, "i");
 }
 
 async function readRules(projectDir: string): Promise<SkillRules> {
