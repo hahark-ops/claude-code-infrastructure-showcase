@@ -31,7 +31,7 @@ Checkpoint artifacts:
 
 ## Phase 3 - Shadow Burn-in
 
-Status: in_progress
+Status: completed
 
 - Operate with real tasks for 1-2 days
 - Identify top false-positive rules
@@ -41,10 +41,11 @@ Current artifacts:
 
 - Labels: `OPENCODE_PHASE2_LABELS.md`
 - Progress snapshots: `OPENCODE_PHASE2_PROGRESS.md`
+- Burn-in report: `OPENCODE_PHASE3_BURNIN.md`
 
 ## Phase 4 - Rule Tuning
 
-Status: in_progress
+Status: completed
 
 - Tune `skill-rules.json` path patterns, exclusions, and skip markers
 - Re-run burn-in sample
@@ -55,11 +56,15 @@ Current artifact:
 
 ## Phase 5 - Progressive Enforce
 
-Status: pending
+Status: in_progress
 
 - Enable `enforce` on one guardrail family first
 - Keep remaining rules in shadow mode
 - Roll back immediately on noisy blocks
+
+Current checkpoint:
+
+- Canary result included in `OPENCODE_PHASE3_BURNIN.md`
 
 ## Phase 6 - Stop Runner Progressive Execute
 
