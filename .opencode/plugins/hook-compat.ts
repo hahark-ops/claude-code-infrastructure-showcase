@@ -397,6 +397,19 @@ export default async function HookCompatPlugin(context: { directory?: string } =
 
       const blocked = matched.filter((x) => x.rule.enforcement === "block");
       if (blocked.length > 0 && enforcementMode === "enforce") {
+        const state = await readState(projectDir, sessionId);
+        state.violations = [
+          ...state.violations,
+          ...blocked.map((x) => ({
+            ts: Date.now(),
+            skill: x.name,
+            enforcement: "block" as Enforcement,
+            path: "prompt",
+            source: "tui.prompt.append",
+            action: "enforce" as const,
+          })),
+        ].slice(-200);
+        await writeState(projectDir, sessionId, state);
         throw new Error(`Blocked by guardrail: ${blocked.map((x) => x.name).join(", ")}`);
       }
     },
